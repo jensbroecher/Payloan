@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="animate.min.css" rel="stylesheet" type="text/css">
+
+<script src="jquery.min.js"></script>
+
+<script>
+function allmenu1(){
+	setTimeout(function(){document.getElementById('allmenu').className = 'animated fadeOutLeftBig';},10);
+	setTimeout(function(){document.location.href = 'payloan.html';},1000);
+}
+function allmenu2(){
+	setTimeout(function(){document.getElementById('allmenu').className = 'animated fadeOutRightBig';},10);
+	setTimeout(function(){document.location.href = 'statement.html';},1000);
+}
+function allmenu3(){
+	setTimeout(function(){document.getElementById('allmenu').className = 'animated fadeOutLeftBig';},10);
+	setTimeout(function(){document.location.href = 'messages.html';},1000);
+}
+function allmenu4(){
+	setTimeout(function(){document.getElementById('allmenu').className = 'animated fadeOutRightBig';},10);
+	setTimeout(function(){document.location.href = 'contactbank.html';},1000);
+}
+function allmenu5(){
+	setTimeout(function(){document.getElementById('allmenu').className = 'animated fadeOutUpBig';},10);
+	setTimeout(function(){document.location.href = 'updates.html';},1000);
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="allmenu">
+<h1 class="animated fadeIn">Please choose:</h1>
+
+<ul id="mainnav">
+  <li onClick="allmenu1()" class="animated fadeInUp andel1">Pay Loan</li>
+  <li onClick="" class="animated fadeInUp andel2">Statement</li>
+  <li onClick="" class="animated fadeInUp andel3">Messages</li>
+  <li onClick="" class="animated fadeInUp andel4">Contact Bank</li>
+  <li onClick="" class="animated fadeInUp andel5">Updates</li>
+</ul>
+
+</div>
+<div style="clear:both"></div>
+
+</body>
+</html>

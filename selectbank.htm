@@ -21,7 +21,18 @@ function gologin(){
 function showlocalstorage(){
 	var thebank = localStorage.getItem('mybank');
 	document.getElementById('inbankname').innerHTML = thebank;
-}	
+}
+function checkPass(){
+    if(document.getElementById('accountname').value == '123456' && document.getElementById('accountpassword').value == 'test'){
+	setTimeout(function(){document.getElementById('login').className = 'animated fadeOut';},10);
+	setTimeout(function(){document.getElementById('blur').className = 'lessblur';},20);
+	setTimeout(function(){document.getElementById('blur').className = 'animated fadeOut';},1020);
+	setTimeout(function(){document.location.href = 'mainmenu.html';},2000);
+	}
+	else {
+		alert('Wrong Account or Password. Please contact your Financial Institution.');
+	}
+}
 </script>
 
 </head>
@@ -34,17 +45,17 @@ function showlocalstorage(){
 <input placeholder="Password" id="accountpassword" name="accountpassword" type="password">
 
 <div id="signinbuttons">
-<button>Sign in</button>
+<button onClick="checkPass();">Sign in</button>
 <button onClick="location.reload();">Cancel</button>
 </div>
 
 <div id="secureconnection">
-<img align="absmiddle" src="lock.png" height="40"> Secure Connection - Advanced 128-Bit Encryption</div>
+<img align="absmiddle" src="lock.png" height="40"> Secure Connection - 128-Bit Encryption</div>
 </div>
 
 <div id="blur">
 
-<h1 class="animated fadeIn">Select your Financial Institution</h1>
+<h1 class="animated fadeIn">Select your Financial Institution:</h1>
 <div id="banks">
 
 <div id="banksleft">

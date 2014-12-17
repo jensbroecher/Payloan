@@ -7,31 +7,32 @@
 
 <link href="styles.css" rel="stylesheet" type="text/css">
 <link href="animate.min.css" rel="stylesheet" type="text/css">
-
+<style type="text/css">
+.goblue {
+	background-color: #EBEBEB !important;
+	transition: all 1s;
+}
+</style>
 <script src="jquery.min.js"></script>
 
 <script>
-
-window.addEventListener('load', function(){ // on page load
- 
- document.body.addEventListener('touchstart', function(e){
-  alert(e.changedTouches[0].pageX) // alert pageX coordinate of touch point
- }, false)
- 
-}, false)
-
+function bgchange(){
+setTimeout(function(){document.getElementById('body').className = 'goblue';},5000);
+}
 </script>
 
-<meta http-equiv="refresh" content="5; url=selectbank.htm">
+<meta http-equiv="refresh" content="7; url=selectbank.htm">
 
 </head>
 
-<body style="background-color:#FFF">
+<body id="body" onLoad="bgchange()" style="background-color:#FFF">
 
 <center>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
-  <p><img class="animated fadeIn andel2" src="logo.png" width="80%"></p>
+  <div class="animated fadeOut" style="-webkit-animation-delay:4s;">
+  <p><img class="animated fadeIn" src="logo.png" width="80%"></p>
+  </div>
 </center>
 
 </body>

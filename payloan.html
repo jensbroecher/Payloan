@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="animate.min.css" rel="stylesheet" type="text/css">
+
+<script src="jquery.min.js"></script>
+
+<script>
+function allmenu1(){
+	setTimeout(function(){document.getElementById('allmenu').className = 'animated fadeOutLeftBig';},10);
+	setTimeout(function(){document.location.href = 'payloan.html';},1000);
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="allmenu" class="animated fadeInRightBig">
+<h1>Overview:</h1>
+
+<div class="infobox">
+<table width="100%" border="0" cellpadding="6">
+  <tr>
+    <td bgcolor="#D8D8D8">Loan: </td>
+    <td bgcolor="#D8D8D8">120.000 KES</td>
+  </tr>
+  <tr>
+    <td bgcolor="#EBEBEB">&nbsp;</td>
+    <td bgcolor="#EBEBEB">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#EBEBEB">Total Balance: </td>
+    <td bgcolor="#EBEBEB">60.000 KES</td>
+  </tr>
+  <tr>
+    <td bgcolor="#EBEBEB">Payable Ammount: </td>
+    <td bgcolor="#EBEBEB">5000 KES </td>
+  </tr>
+</table>
+</div>
+
+<ul id="mainnav">
+  <li onClick="">Make Payment</li>
+</ul>
+
+</div>
+<div style="clear:both"></div>
+
+</body>
+</html>
