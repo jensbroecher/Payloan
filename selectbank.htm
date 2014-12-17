@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="animate.min.css" rel="stylesheet" type="text/css">
+
+<script src="jquery.min.js"></script>
+
+<script>
+function gologin(){
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	document.getElementById('blur').className = 'blur';
+	setTimeout(function(){document.getElementById('login').style.display='block';},1000);
+	setTimeout(function(){document.getElementById('login').className = 'animated fadeInUp';},1000);
+	showlocalstorage();
+}
+function showlocalstorage(){
+	var thebank = localStorage.getItem('mybank');
+	document.getElementById('inbankname').innerHTML = thebank;
+}	
+</script>
+
+</head>
+
+<body>
+
+<div id="login">
+<div id="bankname">Sign into your <span id="inbankname"></span> account</div>
+<input placeholder="Account No." id="accountname" name="accountname" type="text">
+<input placeholder="Password" id="accountpassword" name="accountpassword" type="password">
+
+<div id="signinbuttons">
+<button>Sign in</button>
+<button onClick="location.reload();">Cancel</button>
+</div>
+
+<div id="secureconnection">
+<img align="absmiddle" src="lock.png" height="40"> Secure Connection - Advanced 128-Bit Encryption</div>
+</div>
+
+<div id="blur">
+
+<h1 class="animated fadeIn">Select your Financial Institution</h1>
+<div id="banks">
+
+<div id="banksleft">
+<div class="pic animated fadeInUp andel2" onClick="
+localStorage.removeItem('mybank');
+localStorage.setItem('mybank','Faulu');
+gologin();
+">
+<img src="banklogos/402649.jpg"></div>
+<div class="pic animated fadeInUp andel4" onClick="
+localStorage.removeItem('mybank');
+localStorage.setItem('mybank','Barclays');
+gologin();
+"><img src="banklogos/barclays_416x416.jpg"></div>
+<div class="pic animated fadeInUp andel6" onClick="
+localStorage.removeItem('mybank');
+localStorage.setItem('mybank','Equity Bank');
+gologin();
+"><img src="banklogos/brand.gif"></div>
+<div class="pic animated fadeInUp andel8" onClick="
+localStorage.removeItem('mybank');
+localStorage.setItem('mybank','Consolidated Bank');
+gologin();
+"><img src="banklogos/consolidated-bank-logo.png"></div>
+<div class="pic animated fadeInUp andel10" onClick="
+localStorage.removeItem('mybank');
+localStorage.setItem('mybank','Co-operative Bank');
+gologin();
+"><img src="banklogos/coop_logo_thumb.png"></div>
+</div>
+
+<div id="banksright" class="animated fadeInUp andel4">
+<div class="pic animated fadeInUp andel2" onClick="
+localStorage.removeItem('mybank');
+localStorage.setItem('mybank','Helb');
+gologin();
+"><img src="banklogos/hELB-logo.gif"></div>
+<div class="pic animated fadeInUp andel4" onClick="
+localStorage.removeItem('mybank');
+localStorage.setItem('mybank','KCB');
+gologin();
+"><img src="banklogos/KCB-banner.jpg"></div>
+<div class="pic animated fadeInUp andel6" onClick="
+localStorage.removeItem('mybank');
+localStorage.setItem('mybank','KWFT');
+gologin();
+"><img src="banklogos/KWFT.png"></div>
+<div class="pic animated fadeInUp andel8" onClick="
+localStorage.removeItem('mybank');
+localStorage.setItem('mybank','Standard Chartered');
+gologin();
+"><img src="banklogos/standard-chartered-logo.png"></div>
+</div>
+
+</div>
+
+</div>
+
+<div style="clear:both"></div>
+
+</body>
+</html>
